@@ -19,9 +19,11 @@ const expoHostUri =
     (Constants as any).manifest?.debuggerHost ||
     (Constants as any).manifest2?.extra?.expoGo?.debuggerHost;
 const expoHost = typeof expoHostUri === 'string' ? expoHostUri.split(':')[0] : null;
+const localApiBaseUrl = expoHost ? `http://${expoHost}:3000/api` : 'http://10.227.157.119:3000/api';
 
-// Backend runs on port 3000. Override with EXPO_PUBLIC_API_BASE_URL for a different LAN/device URL.
-export const API_BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL || (expoHost ? `http://${expoHost}:3000/api` : 'http://10.227.157.119:3000/api');
+// Expo Go uses the live Render API by default. Use EXPO_PUBLIC_API_BASE_URL to test a local LAN backend.
+export const API_BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL || 'https://taka-ga3d.onrender.com/api';
+export const LOCAL_API_BASE_URL = localApiBaseUrl;
 
 export const INDORE_CENTER = {
     latitude: 22.7196,
