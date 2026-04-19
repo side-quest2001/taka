@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+web-build/
+
+# Expo / Metro
+.expo/
+expo-env.d.ts
+.metro-health-check*
+
+# Local databases and generated runtime data
+*.db
+*.sqlite
+*.sqlite3
+
+# Native generated folders
+ios/
+android/
+.kotlin/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Logs and debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.pem
+*.orig.*
+*Zone.Identifier
+
+# Local presentation assets
+TAKA PitchDeck Final.pdf
