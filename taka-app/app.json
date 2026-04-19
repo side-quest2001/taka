@@ -33,6 +33,12 @@
     "scheme": "taka",
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5c75f70f-f540-43f8-b0eb-b7ddbfa5071f"
+      }
     }
   }
 }
